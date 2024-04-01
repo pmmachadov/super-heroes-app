@@ -1,24 +1,24 @@
 import { Link } from 'react-router-dom';
 
-const CharactersByHero = ({ alter_ego, characters}) => {
+const CharactersByHero = ({ alter_ego, characters }) => {
     // if ( alter_ego === characters ) return (<></>);
     // return <p>{ characters }</p>
-    return ( alter_ego === characters )
-     ? <></>
-     : <p>{ characters }</p>;
+    return (alter_ego === characters)
+        ? <></>
+        : <p>{ characters }</p>;
 }
 
 
-export const HeroCard = ({ 
+export const HeroCard = ({
     id,
     superhero,
     publisher,
     alter_ego,
     first_appearance,
-    characters ,
+    characters,
 }) => {
 
-    const heroImageUrl = `/assets/heroes/${ id }.jpg`;
+    const heroImageUrl = `/assets/heroes/${id}.jpg`;
 
     // const charactesByHero =  (<p>{ characters }</p>);
 
@@ -28,7 +28,7 @@ export const HeroCard = ({
             <div className="card">
 
                 <div className="row no-gutters">
-                    
+
                     <div className="col-4">
                         <img src={ heroImageUrl } className="card-img" alt={ superhero } />
                     </div>
@@ -50,11 +50,11 @@ export const HeroCard = ({
                                 <small className="text-muted">{ first_appearance }</small>
                             </p>
 
-                            <Link to={`/hero/${ id }`}>
-                                Más..
+                            <Link to={ `/hero/${id}` }>
+                                More...
                             </Link>
 
-                            
+
                         </div>
 
                     </div>
